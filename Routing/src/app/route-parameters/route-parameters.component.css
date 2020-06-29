@@ -1,0 +1,9 @@
+p{
+    text-align: center; 
+    font-size: xxx-large;
+}
+
+li.selected{
+    background-color: #CFD8dc;
+    color: white;
+}

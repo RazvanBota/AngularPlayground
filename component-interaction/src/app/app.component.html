@@ -1,0 +1,18 @@
+<div style="text-align: center">
+  <h1>Welcome to {{title}}</h1>
+</div>
+<app-second-component (childEvent)="message=$event" [parentData]="name"></app-second-component>
+<h2>{{message}}</h2>
+
+<div style="text-align: center">
+  <h1>Pipes</h1>
+</div>
+<app-pipes></app-pipes>
+
+<div style="text-align: center">
+  <h1>Services</h1>
+</div>
+
+<app-employee-list></app-employee-list>
+<app-employee-detailed-list></app-employee-detailed-list>
+

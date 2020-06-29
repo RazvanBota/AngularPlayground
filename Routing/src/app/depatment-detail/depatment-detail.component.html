@@ -1,0 +1,16 @@
+<p>The selected id is {{departmentId}}</p>
+
+<p>
+    <button (click)="showOverview()">Overview</button>
+    <button (click)="showContact()">Contact</button>
+</p>
+<router-outlet></router-outlet>
+
+<p>
+    <button (click)="goPrevious()" *ngIf="departmentId > 1">Previos</button>           
+    <button (click)="goNext()" *ngIf="departmentId < 5">Next</button>
+</p>
+
+<div>
+    <button (click)="goBack()">Back</button>
+</div>
