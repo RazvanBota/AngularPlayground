@@ -1,0 +1,26 @@
+<br/>
+<div class="row">
+    <div *ngFor="let product of products; index as productId">
+        <div class="col-3">
+        <a [title]="product.name + details" href={{product.url}}>
+            <div class="card">
+                <img src={{product.image}} alt="Denim Jeans" style="width:100%">
+                <h2>{{product.name}}</h2>
+                <p class="price"> {{product.price}}$ </p>
+                <div>
+                    <p class="text" *ngIf="product.description">
+                        {{ product.description }}
+                    </p> 
+                </div>   
+            </div>         
+        </a>
+    </div>
+    </div>
+    <br/>
+</div>
+        <!-- </h3> -->
+        <!-- <p *ngIf="product.description">
+            {{ product.description }}
+        </p> -->
+        <!-- <button (click)="share()">Share</button>
+        <app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts> -->
