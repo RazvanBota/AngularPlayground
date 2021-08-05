@@ -1,0 +1,8 @@
+<div class="right">
+    <h1>CHAT 2</h1>
+    <ul>
+        <li *ngFor="let message of conversation | async; let i = index">
+            {{ message.username }} : {{ message.text }}
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,19 @@
+<div>
+    <h1>Chat room as child ( receive via Input )</h1>
+
+    <ol>
+        <li *ngFor="let message of conversation$ | async; let i = index">
+            {{ message.username }} : {{ message.text }}
+        </li>
+    </ol>
+</div>
+<br>
+<div>
+    <h1>Chat room ( read from store )</h1>
+
+    <ol>
+        <li *ngFor="let message of stateConversation$ | async; let i = index">
+            {{ message.username }} : {{ message.text }}
+        </li>
+    </ol>
+</div>

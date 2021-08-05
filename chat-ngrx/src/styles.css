@@ -1,0 +1,70 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial';
+}
+input[type="text"] {
+    width: 95%;
+    padding: 5px;
+    margin: 5px;
+}
+
+button {
+    width: 96%;
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+@media only screen and (min-width: 650px) {
+    .container {
+        display: grid;
+        grid-template-columns: auto-flow repeat(2, 1fr);
+        grid-template-rows: auto-flow repeat(3, 1fr);
+    }  
+
+    app-chat-room {
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    app-chat-room-two {
+        grid-row-start: 4;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        display: grid;
+        grid-template-areas:"user1 user1 room1"
+                            "user2 user3 room2";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    app-chat-user{
+        grid-area: user1;
+    }
+    
+    app-chat-user-two{
+        grid-area: user2;
+    }
+    
+    app-chat-user-three{
+        grid-area: user3;
+    }
+    
+    app-chat-room{
+        grid-area: room1;
+    }
+    
+    app-chat-room-two{
+        grid-area: room2;
+    }
+}
